@@ -34,7 +34,7 @@ pipeline{
         stage('Building and Pushing Docker Image to GCR'){
             steps{
                 withCredentials([file(credentialsId: 'gcp-key', variable : 'GOOGLE_APPLICATION_CREDENTIALS')]){
-                    script(
+                    script{
                         echo 'Building and Pushing Docker Image to GCR'
                         sh '''
                         export PATH=$PATH:$(GCLOUD_PATH)
@@ -50,7 +50,7 @@ pipeline{
                         docker psuh -t gcr.io/${GCP_PROJECT}/ml-project-latest
 
                         '''
-                    )
+                    }
                 }
                 }
             }
