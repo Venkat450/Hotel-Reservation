@@ -15,12 +15,12 @@ pipeline{
             }
         }
 
-        stage('Setting up our virtual environment and Installing dependencies'){
+        stage('Setting up our Virtual Environment and Installing dependancies'){
             steps{
                 script{
-                    echo 'Setting up our virtual environment and Installing dependencies .......................................'
+                    echo 'Setting up our Virtual Environment and Installing dependancies............'
                     sh '''
-                    pyhton -m venv ${VENV_DIR}
+                    python -m venv ${VENV_DIR}
                     . ${VENV_DIR}/bin/activate
                     pip install --upgrade pip
                     pip install -e .
@@ -28,5 +28,5 @@ pipeline{
                 }
             }
         }
-    }
-}
+            }
+        }
