@@ -7,6 +7,8 @@ Hotel_Reservation.egg-info/top_level.txt
 config/__init__.py
 config/model_params.py
 config/paths_config.py
+pipeline/__init__.py
+pipeline/training_pipeline.py
 src/__init__.py
 src/custom_exception.py
 src/data_ingestion.py
@@ -15,5 +17,3 @@ src/logger.py
 src/model_training.py
 utils/__init__.py
 utils/common_functions.py
-utils/pipeline/__init__.py
-utils/pipeline/training_pipeline.py
